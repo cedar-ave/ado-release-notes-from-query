@@ -24,7 +24,7 @@ Add references to your custom fields in:
 ## Add your query URLs
 Replace/add one or more query URLs under `public class CodeEvaler`.
 
-To find them, modify this URL and enter it in your browser or a tool like Postman:
+To find the URLs, modify this URL and enter it in your browser or (for better readability) a tool like Postman:
 ```
 https://healthcatalyst.visualstudio.com/DefaultCollection/<your project name - e.g., CAP/_apis/wit/queries/shared%20queries/<directory if it exists>/<subdirectory if it exists>/<name of query - e.g., myquery>?$depth=2&api-version=2.2
 ```
@@ -32,8 +32,11 @@ https://healthcatalyst.visualstudio.com/DefaultCollection/<your project name - e
 # To automate publication with a VSTS build or release
 Add VSTS build or release steps that:
 - Build and execute the solution
-- Run the script that outputs the notes in a format of your choice
+- Run the script that outputs the notes in a format of your choice ([this script](run.ps1) includes commands)
 - Publish the artifact on the server
+
+### What the `output/start.txt` is for
+For the script to output successfully, an `output` directory is required inside the parent directory. An empty directory cannot be stored in Git. `start.txt` is a blank file to allow the `output` directory to be cloned.
 
 # To build locally
 Open the solution in Visual Studio and click **Start**. For future reference if needed, this creates an **.exe** in `LeadAndCycle/bin/default`.
@@ -41,6 +44,7 @@ Open the solution in Visual Studio and click **Start**. For future reference if 
 # Customize output
 The solution exports JSON (designated by fields named in the `output.Append` lines) and CSV (designated by the fields named in the `csv.append` lines).
 
+### HTML
 Following is an example of how to modify `csv.Append` to form HTML:
 
 ```
@@ -58,3 +62,6 @@ csv.Append("</td></tr>");
 System.IO.File.WriteAllText($@"..\..\..\output\workitems{i}.html", csv.ToString());
 ...
 ```
+When uploaded into HC Community, it appears like this:
+
+![hc community release notes](example.png)
