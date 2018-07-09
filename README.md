@@ -1,7 +1,7 @@
 This solution automatically generates release notes from work items returned by one or more VSTS queries and publishes them as CSV, JSON, or HTML files.
 
-> ### Difference between this solution and the [vsts-to-release-notes-html-table](https://github.com/HealthCatalyst/vsts-release-notes-html-table) Health Catalyst project
-> This solution generates release notes from VSTS queries. The other solution generates them from work items associated with a VSTS release.
+> #### *Difference between this solution and the [vsts-to-release-notes-html-table](https://github.com/HealthCatalyst/vsts-release-notes-html-table) Health Catalyst project*
+> *This solution generates release notes from VSTS queries. The other solution generates them from work items associated with a VSTS release.*
 
 # Create custom VSTS work item fields if necessary
 See [this info about custom work item fields in the Health Catalyst VSTS instance](https://github.com/HealthCatalyst/vsts-release-notes-html-table#step-1-identify-default-and-custom-fields-in-vsts-work-item-forms-create-custom-fields-if-necessary) for details.
