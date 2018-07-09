@@ -45,7 +45,7 @@ Open the solution in Visual Studio and click **Start**. For future reference if 
 The solution exports JSON (designated by fields named in the `output.Append` lines) and CSV (designated by the fields named in the `csv.append` lines).
 
 ### HTML
-Following is an example of how to modify `csv.Append` to form HTML:
+Following is an example of how to modify `csv.Append` to form HTML: 
 
 ```
 csv.Append("<tr style=\"font-size: 14px;\"><td align=\"left\" style=\"padding: 6px 10px 6px 0px; border-bottom: 1px solid #f0f0f0;\"><span style=\"color: white; background-color: #6761b7; text-align: center; display:block; width: 45px; padding: 1px 2px 1px 2px; border-radius: 4px; font-family: sans-serif; font-size: 85%;\">Added</span></td><td style=\"padding: 6px 10px 6px 5px; border-bottom: 1px solid #f0f0f0;\">");
