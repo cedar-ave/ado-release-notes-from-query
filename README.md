@@ -7,7 +7,7 @@ This solution automatically generates release notes from work items returned by 
 See [this info about custom work item fields in the Health Catalyst VSTS instance](https://github.com/HealthCatalyst/vsts-release-notes-html-table#step-1-identify-default-and-custom-fields-in-vsts-work-item-forms-create-custom-fields-if-necessary) for details.
 
 # Create VSTS queries
-![concept](concept.png)
+![concept](query-concept.png)
 
 # Modify the code
 ## Add your PAT
